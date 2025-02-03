@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Expense Manager</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Section For Total Data -->
+      <h2>Expense Manager</h2>
+      <section class="data">
+        <div
+          style="border-radius: 5px 0 0 5px; border-right: none"
+          class="total-income"
+        >
+          <p>Total Income</p>
+          <p id="total-income">0</p>
+        </div>
+        <div class="total-expense">
+          <p>Total Expense</p>
+          <p id="total-expense">0</p>
+        </div>
+        <div
+          style="border-radius: 0 5px 5px 0; border-left: none"
+          class="total-balance"
+        >
+          <p>Total Balance</p>
+          <p id="total-balance">0</p>
+        </div>
+      </section>
+      <!-- Section for list of data -->
+      <section class="list">
+        <table cellspacing="0">
+          <thead>
+            <tr>
+              <td colspan="2">Date</td>
+              <td colspan="1">Income</td>
+              <td colspan="1">Expense</td>
+              <td colspan="1"></td>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <td colspan="2">12 JAN 2025</td>
+              <td>1000</td>
+              <td>103</td>
+              <td>Delete</td>
+            </tr>
+            <tr>
+              <td colspan="2">12 JAN 2025</td>
+              <td>1000</td>
+              <td>103</td>
+              <td>Delete</td>
+            </tr>
+            <tr>
+              <td colspan="2">12 JAN 2025</td>
+              <td>1000</td>
+              <td>103</td>
+              <td>Delete</td>
+            </tr> -->
+          </tbody>
+        </table>
+      </section>
+      <!-- Button for Add Income/Expense -->
+      <section class="buttons">
+        <button id="income-btn" class="add-income-btn add-btns">
+          Add Income
+        </button>
+        <button id="expense-btn" class="add-expense-btn add-btns">
+          Add Expense
+        </button>
+      </section>
+    </div>
+
+    <!-- Models -->
+
+    <div id="add-model" class="model">
+      <div class="dialogue">
+        <i class="bx bx-x close-btn"></i>
+        <h3>Add Income/Expense</h3>
+        <input
+          type="number"
+          id="add-input"
+          placeholder="Enter Your Value Here..."
+        />
+        <button id="add-btn">Add</button>
+      </div>
+    </div>
+
+    <!-- Edit model -->
+    <div id="edit-model" class="model">
+      <div class="dialogue">
+        <i class="bx bx-x close-btn"></i>
+        <h3>Add Income/Expense</h3>
+        <input
+          type="number"
+          id="edit-input"
+          placeholder="Enter Your Value Here..."
+        />
+        <button id="edit-btn">Edit</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

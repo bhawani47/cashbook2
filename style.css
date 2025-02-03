@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: aliceblue;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+  align-items: center;
+  position: relative;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+}
+
+.container {
+  width: 50vw;
+  height: 98%;
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  position: relative;
+  /* display: none; */
+}
+
+.container section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.data {
+  height: 20%;
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.data div {
+  background-color: rgb(22, 22, 22);
+}
+.list {
+  height: 70%;
+  overflow: scroll;
+  scrollbar-width: none;
+  margin-bottom: 100px;
+}
+section.buttons {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  height: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+}
+
+.data div {
+  width: 30%;
+  height: 80%;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: 600;
+}
+
+.total-income > * {
+  color: green;
+}
+.total-expense > * {
+  color: red;
+}
+
+.container .list {
+  flex-direction: column;
+  justify-content: start;
+}
+
+thead > tr > td {
+  font-size: 1rem;
+  text-align: center;
+}
+
+thead > tr > td:nth-child(1) {
+  text-align: left;
+  padding-left: 13%;
+}
+
+thead > tr > td:nth-child(2) {
+  color: rgb(0, 255, 0);
+}
+thead > tr > td:nth-child(3) {
+  color: rgb(255, 0, 0);
+}
+
+tbody > tr > td:nth-child(1) {
+  font-size: 14px;
+  text-align: left;
+  padding-left: 8px;
+}
+
+tbody > tr > td {
+  font-size: 14px;
+  text-align: center;
+}
+
+tbody td:last-child {
+  border-radius: 0 5px 5px 0;
+}
+tbody td:first-child {
+  border-radius: 5px 0 0 5px;
+}
+table {
+  border-spacing: 0 10px;
+}
+
+tbody tr {
+  background-color: gray;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.add-btns {
+  width: 45%;
+  height: 70%;
+  background-color: rgb(0, 255, 0);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+}
+
+.add-expense-btn {
+  background-color: red;
+  color: white;
+}
+button {
+  cursor: pointer;
+}
+/* Styling the model  */
+
+.model {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(22, 22, 22, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.dialogue {
+  width: 40%;
+  height: 30%;
+  background-color: rgb(198, 195, 195);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.dialogue input {
+  height: 50px;
+  width: 70%;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  padding: 20px;
+  font-size: 20px;
+  color: black;
+}
+
+input:focus {
+  outline: none;
+  color: black;
+  font-size: 20px;
+}
+
+.dialogue button {
+  height: 50px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: rgb(0, 200, 0);
+  width: 20%;
+  color: rgb(38, 36, 36);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.dialogue h3 {
+  position: absolute;
+  top: 10px;
+  color: rgb(34, 33, 33);
+  left: 25px;
+}
+
+.dialogue i {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: rgb(34, 33, 33);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.del-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+}
+
+tr {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+tr:hover > td {
+  background-color: blueviolet;
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  section.buttons {
+    /* bottom: 60px; */
+  }
+
+  .data div {
+    width: 33.333333%;
+  }
+  .data {
+    padding: 20px 0;
+  }
+  .dialogue {
+    width: 90%;
+    height: 30%;
+    position: relative;
+    transform: translateY(-80px);
+  }
+  .dialogue button {
+    color: white;
+  }
+  .del-btn {
+    margin-right: 10px;
+  }
+}
